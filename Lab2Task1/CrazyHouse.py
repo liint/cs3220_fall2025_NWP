@@ -17,7 +17,12 @@ class CrazyHouse(Environment):
         if mk != ms:
             self.status[mk] = [mkt]
         if ms == dg:
-            ms += random.choice([-1,1])
+            if ms == 4:
+                ms += -1
+            elif ms == 0:
+                ms += 1
+            else:
+                ms += random.choice([-1,1])
             self.status[ms] = mst
         else:
             self.status[ms] = mst
