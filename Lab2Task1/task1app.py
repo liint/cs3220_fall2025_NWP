@@ -1,18 +1,19 @@
 import streamlit as st
 import streamlit.components.v1 as components
 from PIL import Image
-import random
+import random, os.path
 from CrazyHouse import CrazyHouse
 from agent import RandomCatAgent
 from residents import *
 
 def getimgs(agentLoc, envState):
+    script_dir = os.path.dirname(os.path.abspath(__file__))
     images = [['empty'],['empty'],['empty'],['empty'],['empty']]
     for i in range(len(envState)):
         if isinstance(envState[i],Dog):
-            images[i] = Image.open("imgs/dog image.jpeg")#dog image
+            images[i] = Image.open(os.path.join(script_dir, "imgs/dog image.jpeg"))#dog image
         elif isinstance(envState[i],Mouse):
-            images[i] = Image.open("../imgs/mouse image.jpeg")#mouse image
+            images[i] = Image.open(os.path.join(script_dir, "../imgs/mouse image.jpeg"))#mouse image
         elif isinstance(envState[i],Milk):
             if images[i] == Image.open("imgs/dog image.jpeg"):#dog image
                 images[i].append(Image.open("imgs/milkImage.jpeg"))#milk image
