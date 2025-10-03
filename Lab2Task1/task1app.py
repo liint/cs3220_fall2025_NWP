@@ -13,7 +13,7 @@ def getimgs(agentLoc, envState):
         if isinstance(envState[i],Dog):
             images[i] = Image.open(os.path.join(script_dir, "imgs/dog image.jpeg"))#dog image
         elif isinstance(envState[i],Mouse):
-            images[i] = Image.open(os.path.join(script_dir, "../imgs/mouse image.jpeg"))#mouse image
+            images[i] = Image.open(os.path.join(script_dir, "imgs/mouse image.jpeg"))#mouse image
         elif isinstance(envState[i],Milk):
             if images[i] == Image.open("imgs/dog image.jpeg"):#dog image
                 images[i].append(Image.open("imgs/milkImage.jpeg"))#milk image
