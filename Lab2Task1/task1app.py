@@ -50,6 +50,8 @@ def main():
         st.session_state["clicked"] = False
 
     if not st.session_state["clicked"]:
+        st.title('Simple Agents - lab2. Example1')
+        st.header("_Initial Env._", divider=True)
         a1 = RandomCatAgent()
         st.info(f"{a1} has the initial performance: {a1.performance}")
         e1 = CrazyHouse()
