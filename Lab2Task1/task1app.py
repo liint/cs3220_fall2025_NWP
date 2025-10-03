@@ -8,7 +8,7 @@ from residents import *
 
 def getimgs(agentLoc, envState):
     images = [['empty'],['empty'],['empty'],['empty'],['empty']]
-    for i in len(envState):
+    for i in range(len(envState)):
         if isinstance(envState[i],Dog):
             images[i] = Image.open("imgs\dog image.jpeg")#dog image
         elif isinstance(envState[i],Mouse):
