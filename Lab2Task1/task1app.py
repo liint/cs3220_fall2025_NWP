@@ -10,15 +10,15 @@ def getimgs(agentLoc, envState):
     images = [['empty'],['empty'],['empty'],['empty'],['empty']]
     for i in len(envState):
         if isinstance(envState[i],Dog):
-            images[i] = Image.open()#dog image
+            images[i] = Image.open("imgs\\dog image")#dog image
         elif isinstance(envState[i],Mouse):
-            images[i] = Image.open()#mouse image
+            images[i] = Image.open("imgs\\mouseImage")#mouse image
         elif isinstance(envState[i],Milk):
-            if images[i] == Image.open():#dog image
-                images[i].append(Image.open())#milk image
+            if images[i] == Image.open("imgs\\dog image"):#dog image
+                images[i].append(Image.open("imgs\\milkImage"))#milk image
             else:
-                images[i] = Image.open()#milk image
-    images[agentLoc].append(Image.open())#cat image
+                images[i] = Image.open("imgs\\milkImage")#milk image
+    images[agentLoc].append(Image.open("imgs\\catImage"))#cat image
     return images
 
 def drawBtn(e,a):
