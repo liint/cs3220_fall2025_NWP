@@ -15,11 +15,11 @@ def getimgs(agentLoc, envState):
         elif isinstance(envState[i],Mouse):
             images[i] = Image.open(os.path.join(script_dir, "imgs/mouse image.jpeg"))#mouse image
         elif isinstance(envState[i],Milk):
-            if images[i] == Image.open("imgs/dog image.jpeg"):#dog image
-                images[i].append(Image.open("imgs/milkImage.jpeg"))#milk image
+            if images[i] == Image.open(os.path.join(script_dir, "imgs/dog image.jpeg")):#dog image
+                images[i].append(Image.open(os.path.join(script_dir, "imgs/milkImage.jpeg")))#milk image
             else:
-                images[i] = Image.open("imgs/milkImage.jpeg")#milk image
-    images[agentLoc].append(Image.open("imgs/catImage.jpeg"))#cat image
+                images[i] = Image.open(os.path.join(script_dir, "imgs/milkImage.jpeg"))#milk image
+    images[agentLoc].append(Image.open(os.path.join(script_dir, "imgs/catImage.jpeg")))#cat image
     return images
 
 def drawBtn(e,a):
