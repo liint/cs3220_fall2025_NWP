@@ -19,7 +19,7 @@ def getimgs(agentLoc, envState):
                 images[i].append(Image.open(os.path.join(script_dir, "imgs/milkImage.jpeg")))#milk image
             else:
                 images[i] = Image.open(os.path.join(script_dir, "imgs/milkImage.jpeg"))#milk image
-    images[agentLoc].append(Image.open(os.path.join(script_dir, "imgs/catImage.jpeg")))#cat image
+    #images[agentLoc].append(Image.open(os.path.join(script_dir, "imgs/catImage.jpeg")))#cat image
     image = Image.open(os.path.join(script_dir, "imgs/catImage.jpeg"))
 #    return images 
     return image
