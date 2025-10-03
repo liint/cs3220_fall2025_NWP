@@ -20,9 +20,9 @@ def getimgs(agentLoc, envState):
             else:
                 images[i] = Image.open(os.path.join(script_dir, "imgs/milkImage.jpeg"))#milk image
     #images[agentLoc].append(Image.open(os.path.join(script_dir, "imgs/catImage.jpeg")))#cat image
-    image = Image.open(os.path.join(script_dir, "imgs/catImage.jpeg"))
-#    return images 
-    return image
+    #image = Image.open(os.path.join(script_dir, "imgs/catImage.jpeg"))
+    return images 
+    #return image
 
 def drawBtn(e,a):
     option= [e,a]
