@@ -2,7 +2,7 @@ import streamlit as st
 import streamlit.components.v1 as components
 import networkx as nx
 from pyvis.network import Network
-from mazeWorldData import *
+from mazeWorldData import mazeActions, treasures
 from src.graphClass import Graph
 from mazeEnvironment import MazeEnvironment
 from mazeAgent import MazeAgent
