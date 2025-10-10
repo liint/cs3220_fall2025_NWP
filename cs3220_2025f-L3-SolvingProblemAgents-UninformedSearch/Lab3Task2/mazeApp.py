@@ -87,7 +87,7 @@ def main():
         BFSMazeAgent = MazeAgent(initState,mazeGraph,goalStates,BestFirstSearchAgentProgram())
         st.write("after agent made")
 
-        re.add_thing(BFSMazeAent)
+        re.add_thing(BFSMazeAgent)
         st.write("added thing")
         st.header("State of the Environment", divider="red")
         nodeColors[BFSMazeAgent.state]="red"
