@@ -16,6 +16,7 @@ class MazeAgent(SimpleProblemSolvingAgentProgram):
                 return eval(input('Percept={}; action? '.format(percept)))
 
         self.program = program
+        print(program)
 
 
     def update_state(self, state, percept):
