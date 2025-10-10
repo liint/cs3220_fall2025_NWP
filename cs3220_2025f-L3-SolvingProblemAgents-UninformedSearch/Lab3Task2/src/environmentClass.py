@@ -57,8 +57,8 @@ class Environment:
 
   def add_thing(self, thing, location=None):
     #from agentClass import Agent
-    st.write("got into add_thing")
     from src.problemSolvingAgentProgramClass import SimpleProblemSolvingAgentProgram
+    st.write("got into add_thing")
     if thing in self.agents:
       print("Can't add the same agent twice")
     else:
