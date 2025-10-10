@@ -83,7 +83,7 @@ def main():
         initState = "start"
         goalStates = treasures
         re=MazeEnvironment(mazeGraph)
-        BFSMazeAgent = MazeAgent(initState,mazeGraph,goalStates,BestFirstSearchAgentProgram)
+        BFSMazeAgent = MazeAgent(initState,mazeGraph,goalStates,BestFirstSearchAgentProgram())
 
         re.add_thing(BFSMazeAgent)
         st.header("State of the Environment", divider="red")
