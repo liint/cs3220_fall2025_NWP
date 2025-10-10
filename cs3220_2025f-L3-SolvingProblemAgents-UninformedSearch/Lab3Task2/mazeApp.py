@@ -78,6 +78,7 @@ def main():
     if not st.session_state["clicked"]:
         st.header("Problem Solving Agents: Maze Navigation Problem")
         st.header("_Initial Env._", divider=True)
+        print("before graph made")
         mazeGraph = Graph(mazeActions)
         print("after graph made")
         nodeColors=makeDefaultColors(mazeGraph.graph_dict)
