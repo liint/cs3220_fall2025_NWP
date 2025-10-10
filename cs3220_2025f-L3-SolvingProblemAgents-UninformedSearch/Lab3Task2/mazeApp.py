@@ -78,22 +78,22 @@ def main():
     if not st.session_state["clicked"]:
         st.header("Problem Solving Agents: Maze Navigation Problem")
         st.header("_Initial Env._", divider=True)
-        print("before graph made")
+        st.write("before graph made")
         mazeGraph = Graph(mazeActions)
-        print("after graph made")
+        st.write("after graph made")
         nodeColors=makeDefaultColors(mazeGraph.graph_dict)
         initState = "start"
         goalStates = treasures
         re=MazeEnvironment(mazeGraph)
         BFSMazeAgent = MazeAgent(initState,mazeGraph,goalStates,BestFirstSearchAgentProgram())
-        print("after agent made")
+        st.write("after agent made")
 
         re.add_thing(BFSMazeAgent)
         st.header("State of the Environment", divider="red")
         nodeColors[BFSMazeAgent.state]="red"
         nodeColors[BFSMazeAgent.goal]="green"
         buildGraph(mazeGraph, nodeColors) 
-        print("after graph built")
+        st.write("after graph built")
         st.info(f"The Agent in: {BFSMazeAgent.state} with performance {BFSMazeAgent.performance}.")
         st.info(f"The Agent goal is: {BFSMazeAgent.goal} .")
 
