@@ -4,7 +4,7 @@ A base class representing an abstract Environment.
 The environment keeps a list of .agents.
 Each agent has a .performance slot, initialized to 0.
 '''
-
+import streamlit as st
 #from agentClass import Agent
 
 class Environment:
@@ -57,7 +57,7 @@ class Environment:
 
   def add_thing(self, thing, location=None):
     #from agentClass import Agent
-    print("got into add_thing")
+    st.wrtie("got into add_thing")
     from src.problemSolvingAgentProgramClass import SimpleProblemSolvingAgentProgram
     if thing in self.agents:
       print("Can't add the same agent twice")
