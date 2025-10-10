@@ -16,7 +16,6 @@ class MazeAgent(SimpleProblemSolvingAgentProgram):
                 return eval(input('Percept={}; action? '.format(percept)))
 
         self.program = program
-        print(program)
 
 
     def update_state(self, state, percept):
@@ -35,6 +34,7 @@ class MazeAgent(SimpleProblemSolvingAgentProgram):
     
     def search(self, problem):
         seq = self.program(problem)
+        print(seq)
         solution=self.actions_path(seq.path())
         print("Solution (a sequence of actions) from the initial state to a goal: {}".format(solution))
         return solution
