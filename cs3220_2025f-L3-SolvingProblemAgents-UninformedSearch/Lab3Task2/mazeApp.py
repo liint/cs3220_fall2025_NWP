@@ -78,7 +78,6 @@ def main():
     if not st.session_state["clicked"]:
         st.header("Problem Solving Agents: Maze Navigation Problem")
         st.header("_Initial Env._", divider=True)
-        st.write("before graph made")
         mazeGraph = Graph(mazeActions)
         st.write("after graph made")
         nodeColors=makeDefaultColors(mazeGraph.graph_dict)
@@ -89,6 +88,7 @@ def main():
         st.write("after agent made")
 
         re.add_thing(BFSMazeAgent)
+        st.write("added thing")
         st.header("State of the Environment", divider="red")
         nodeColors[BFSMazeAgent.state]="red"
         nodeColors[BFSMazeAgent.goal]="green"
