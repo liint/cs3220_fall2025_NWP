@@ -58,22 +58,20 @@ class Environment:
   def add_thing(self, thing, location=None):
     #from agentClass import Agent
     from src.problemSolvingAgentProgramClass import SimpleProblemSolvingAgentProgram
-    st.write("got into add_thing 3")
+    #st.write("got into add_thing 3")
     if thing in self.agents:
-      st.write("into if")
+      #st.write("into if")
       print("Can't add the same agent twice")
     else:
       if isinstance(thing, SimpleProblemSolvingAgentProgram):
-        st.write("into else if")
+        #st.write("into else if")
         #thing(thing.state)
-        st.write("after thing(thing.state)")
+        #st.write("after thing(thing.state)")
         #thing.performance = 0
         #thing.location = location if location is not None else self.default_location(thing)
         print(f"The Agent in {thing.state} with performance {thing.performance}")
         self.agents.append(thing)
-        st.write("end of else if")
-    st.write("end of add thing")
-        
+        #st.write("end of else if")        
        
             
           
