@@ -56,7 +56,7 @@ class MazeAgent(SimpleProblemSolvingAgentProgram):
                 self.state = self.update_state(self.state, percept)
                 goal = current_goal
                 problem = self.formulate_problem(self.state, goal)
-                print(problem)
+                print(problem + "mna")
                 self.seq.append (self.search(problem))
                 percept=current_goal
                 self.goal.remove(goal)
