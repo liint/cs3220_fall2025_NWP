@@ -19,7 +19,7 @@ for i in range(len(treasures)):
         a = random.randint(0,6)
         b = random.randint(0,6)
     #maze[a][b] = i
-    treasures[i] = str(a +","+b)
+    treasures[i] = (""+a +","+b)
 
 #print(maze)
 
