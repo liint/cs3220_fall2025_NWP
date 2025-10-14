@@ -65,7 +65,7 @@ class Environment:
     else:
       if isinstance(thing, SimpleProblemSolvingAgentProgram):
         st.write("into else if")
-        thing(thing.state)
+        #thing(thing.state)
         st.write("after thing(thing.state)")
         #thing.performance = 0
         #thing.location = location if location is not None else self.default_location(thing)
