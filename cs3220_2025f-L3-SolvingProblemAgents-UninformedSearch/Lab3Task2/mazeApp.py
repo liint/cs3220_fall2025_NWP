@@ -26,7 +26,7 @@ def AgentStep(opt):
         e.step()
         st.success(" Agent now at : {}.".format(a.state))
         st.info("Current Agent performance {}:".format(a.performance))
-        st.write(c[a.state])
+        st.write(a.state)
         c[a.state]="orange"
         st.info("State of the Environment:")
         buildGraph(e.status, c) 
