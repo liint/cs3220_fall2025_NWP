@@ -26,6 +26,7 @@ class MazeEnvironment(Environment):
                     print(f"Agent reached the goal: {agent.goal}")
             else:
                 agent.treasured = True
+                agent.oldgoal = agent.goal
                 agent.goal=["end"]
                 agent.seq=(agent.search(agent.formulate_problem(agent.state,agent.goal)))
 

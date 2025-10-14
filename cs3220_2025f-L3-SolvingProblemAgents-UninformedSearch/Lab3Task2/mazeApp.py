@@ -28,6 +28,8 @@ def AgentStep(opt):
         st.info("Current Agent performance {}:".format(a.performance))
         st.info(f"The Agent goal is: {a.goal} .")
         #st.write(a.state)
+        for i in a.oldgoal:
+            c[i] = "white"
         c[a.state]="orange"
         for i in a.goal:
             c[i]="green"
