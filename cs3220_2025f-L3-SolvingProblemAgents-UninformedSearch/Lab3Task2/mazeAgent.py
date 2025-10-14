@@ -34,7 +34,7 @@ class MazeAgent(SimpleProblemSolvingAgentProgram):
     
     def search(self, problem):
         seq = self.program(problem)
-        #print(seq)
+        print(seq)
         solution=self.actions_path(seq.path())
         print("Solution (a sequence of actions) from the initial state to a goal: {}".format(solution))
         return solution
@@ -56,7 +56,7 @@ class MazeAgent(SimpleProblemSolvingAgentProgram):
                 self.state = self.update_state(self.state, percept)
                 goal = current_goal
                 problem = self.formulate_problem(self.state, goal)
-                print(problem)
+                #print(problem)
                 self.seq.append (self.search(problem))
                 percept=current_goal
                 self.goal.remove(goal)
