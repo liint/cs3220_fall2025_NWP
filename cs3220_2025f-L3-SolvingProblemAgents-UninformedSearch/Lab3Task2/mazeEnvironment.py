@@ -1,5 +1,6 @@
-from src.environmentClass import Environment
 import streamlit as st
+from src.environmentClass import Environment
+
 
 class MazeEnvironment(Environment):
     def __init__(self, navGraph):
