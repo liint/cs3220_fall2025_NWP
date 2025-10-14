@@ -34,7 +34,6 @@ class MazeEnvironment(Environment):
     def step(self):
         if not self.is_done():
             actions = []
-            st.write(actions)
             for agent in self.agents:
                 if agent.alive:
                     action=agent.seq.pop(0)
