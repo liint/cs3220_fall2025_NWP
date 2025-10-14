@@ -86,8 +86,8 @@ def main():
         #st.write("after graph made")
         nodeColors=makeDefaultColors(mazeGraph.graph_dict)
         initState = "start"
-        #goalStates = treasures
-        goalStates = ["end"]
+        goalStates = treasures
+        #goalStates = ["end"]
         re=MazeEnvironment(mazeGraph)
         BFSMazeAgent = MazeAgent(initState,mazeGraph,goalStates,BestFirstSearchAgentProgram())
         #st.write("after agent made")
