@@ -59,7 +59,6 @@ mazeData = {
 }
 
 for i in mazeData:
-    print(i)
     for j in treasures:
         if j in mazeData[i]:
             mazeData[i][j] -=1
