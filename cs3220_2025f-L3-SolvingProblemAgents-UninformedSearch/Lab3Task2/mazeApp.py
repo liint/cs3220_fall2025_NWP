@@ -30,6 +30,7 @@ def AgentStep(opt):
         #st.write(a.state)
         for i in a.oldgoal:
             c[i] = "white"
+        a.oldgoal = []
         c[a.state]="orange"
         for i in a.goal:
             c[i]="green"
