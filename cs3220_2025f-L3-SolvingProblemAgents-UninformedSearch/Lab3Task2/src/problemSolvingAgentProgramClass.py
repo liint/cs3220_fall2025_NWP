@@ -1,5 +1,3 @@
-import streamlit as st
-
 class SimpleProblemSolvingAgentProgram:
   #Abstract framework for a problem-solving agent
   def __init__(self, initial_state=None):
@@ -22,7 +20,6 @@ class SimpleProblemSolvingAgentProgram:
         
         if not self.seq:
             goal = self.formulate_goal(self.state)
-            st.write(goal)
             if isinstance(goal, list) and len(goal)>1:
                   percept=self.state                         
                   while len(self.goal)>0:
