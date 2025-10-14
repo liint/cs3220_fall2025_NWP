@@ -26,6 +26,7 @@ def AgentStep(opt):
         e.step()
         st.success(" Agent now at : {}.".format(a.state))
         st.info("Current Agent performance {}:".format(a.performance))
+        st.info(f"The Agent goal is: {a.goal} .")
         #st.write(a.state)
         c[a.state]="orange"
         st.info("State of the Environment:")
