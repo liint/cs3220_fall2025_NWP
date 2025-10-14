@@ -56,6 +56,7 @@ def buildGraph(graphData, nodeColorsDict):
                 edges.append(set((node_source,node_target)))  
     #st.write(edges)              
     g.add_edges_from(edges)
+    st.write(g.edges)
 
     netMaze.from_nx(g)
     netMaze.save_graph("L3_MazeGraph.html")
