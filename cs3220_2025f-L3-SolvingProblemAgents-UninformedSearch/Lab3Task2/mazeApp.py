@@ -34,11 +34,7 @@ def AgentStep(opt):
         drawBtn(e,a,c)
     else:
         if a.state in a.goal:
-            if a.treasured:
                 st.success(" Agent now at the goal state: {}.".format(a.state))
-            else:
-                a.treasured = True
-                a.goal = "end"
         else:
             st.error("Agent in location {} and it is dead.".format(a.state))
         

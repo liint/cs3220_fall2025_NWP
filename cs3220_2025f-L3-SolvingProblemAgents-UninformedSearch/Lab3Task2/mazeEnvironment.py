@@ -18,11 +18,16 @@ class MazeEnvironment(Environment):
             agent.alive = False
             print("Agent {} is dead.".format(agent))
         elif agent.state==agent.goal or len(agent.seq)==0:
-            agent.alive = False
-            if len(agent.seq)==0:
-                print("Agent reached all goals")
+            if agent.treasured:
+                agent.alive = False
+                if len(agent.seq)==0:
+                    print("Agent reached all goals")
+                else:
+                    print(f"Agent reached the goal: {agent.goal}")
             else:
-                print(f"Agent reached the goal: {agent.goal}")
+                agent.treasured = True
+                agent.goal=["end"]
+                agent.seq=(agent.search(agent.formulate_problem(agent.state,agent.goal)))
 
     def execute_action(self, agent, action):
         if self.is_agent_alive(agent):
