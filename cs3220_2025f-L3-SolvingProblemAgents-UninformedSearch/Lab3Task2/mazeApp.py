@@ -2,7 +2,7 @@ import streamlit as st
 import streamlit.components.v1 as components
 import networkx as nx
 from pyvis.network import Network
-from mazeWorldData import mazeActions, treasures
+from mazeWorldData import mazeActions, treasures, mazeData
 from src.graphClass import Graph
 from mazeEnvironment import MazeEnvironment
 from mazeAgent import MazeAgent
@@ -80,7 +80,7 @@ def main():
     if not st.session_state["clicked"]:
         st.header("Problem Solving Agents: Maze Navigation Problem")
         st.header("_Initial Env._", divider=True)
-        mazeGraph = Graph(mazeActions)
+        mazeGraph = Graph(mazeData)
         st.write("after graph made")
         nodeColors=makeDefaultColors(mazeGraph.graph_dict)
         initState = "start"
