@@ -93,7 +93,7 @@ def main():
         #st.write("added thing")
         st.header("State of the Environment", divider="red")
         nodeColors[BFSMazeAgent.state]="red"
-        nodeColors[BFSMazeAgent.goal[0]]="green"
+        nodeColors[BFSMazeAgent.goal]="green"
         buildGraph(mazeGraph, nodeColors) 
         #st.write("after graph built")
         st.info(f"The Agent in: {BFSMazeAgent.state} with performance {BFSMazeAgent.performance}.")
