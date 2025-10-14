@@ -53,7 +53,8 @@ def buildGraph(graphData, nodeColorsDict):
     for node_source in graphData.nodes():
         for node_target, dist in graphData.get(node_source).items():
             if set((node_source,node_target)) not in edges:
-                edges.append(set((node_source,node_target)))                
+                edges.append(set((node_source,node_target)))  
+    st.write(edges)              
     g.add_edges_from(edges)
 
     netMaze.from_nx(g)
