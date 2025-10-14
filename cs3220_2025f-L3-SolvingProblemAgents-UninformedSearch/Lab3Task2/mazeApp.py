@@ -98,6 +98,7 @@ def main():
         #nodeColors[BFSMazeAgent.goal]="green"
         for i in BFSMazeAgent.goal:
             nodeColors[i]="green"
+        st.write(nodeColors)
         buildGraph(mazeGraph, nodeColors) 
         #st.write("after graph built")
         st.info(f"The Agent in: {BFSMazeAgent.state} with performance {BFSMazeAgent.performance}.")
