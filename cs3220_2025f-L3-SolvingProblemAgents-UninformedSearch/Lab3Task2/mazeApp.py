@@ -30,6 +30,7 @@ def AgentStep(opt):
         c[a.state]="orange"
         st.info("State of the Environment:")
         buildGraph(e.status, c) 
+        drawBtn(e,a,c)
     else:
         if a.state==a.goal:
             st.success(" Agent now at the goal state: {}.".format(a.state))
