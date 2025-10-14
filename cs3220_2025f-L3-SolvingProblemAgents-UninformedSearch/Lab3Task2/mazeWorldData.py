@@ -62,7 +62,7 @@ for i in mazeData:
     print(i)
     for j in treasures:
         if j in i:
-            i[j] -=1
+            mazeData[i][j] -=1
 
 """mazeActions = {
     "0,0":{},
