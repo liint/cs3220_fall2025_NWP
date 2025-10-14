@@ -26,7 +26,7 @@ def AgentStep(opt):
         e.step()
         st.success(" Agent now at : {}.".format(a.state))
         st.info("Current Agent performance {}:".format(a.performance))
-        st.write(a.state)
+        #st.write(a.state)
         c[a.state]="orange"
         st.info("State of the Environment:")
         buildGraph(e.status, c) 
@@ -99,7 +99,7 @@ def main():
         #nodeColors[BFSMazeAgent.goal]="green"
         for i in BFSMazeAgent.goal:
             nodeColors[i]="green"
-        st.write(nodeColors)
+        #st.write(nodeColors)
         buildGraph(mazeGraph, nodeColors) 
         #st.write("after graph built")
         st.info(f"The Agent in: {BFSMazeAgent.state} with performance {BFSMazeAgent.performance}.")
