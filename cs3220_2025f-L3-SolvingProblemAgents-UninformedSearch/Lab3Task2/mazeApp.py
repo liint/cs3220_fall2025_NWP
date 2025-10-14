@@ -32,7 +32,7 @@ def AgentStep(opt):
         buildGraph(e.status, c) 
         drawBtn(e,a,c)
     else:
-        if a.state is any(a.goal):
+        if a.state in a.goal:
             if a.treasured:
                 st.success(" Agent now at the goal state: {}.".format(a.state))
             else:
