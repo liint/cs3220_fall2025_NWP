@@ -56,7 +56,7 @@ def buildGraph(graphData, nodeColorsDict):
                 edges.append(set((node_source,node_target)))  
     #st.write(edges)              
     g.add_edges_from(edges)
-    st.write(g.edges(data=True))
+    #st.write(g.edges(data=True))
 
     netMaze.from_nx(g)
     netMaze.save_graph("L3_MazeGraph.html")
@@ -81,21 +81,21 @@ def main():
         st.header("Problem Solving Agents: Maze Navigation Problem")
         st.header("_Initial Env._", divider=True)
         mazeGraph = Graph(mazeData)
-        st.write("after graph made")
+        #st.write("after graph made")
         nodeColors=makeDefaultColors(mazeGraph.graph_dict)
         initState = "start"
         goalStates = treasures
         re=MazeEnvironment(mazeGraph)
         BFSMazeAgent = MazeAgent(initState,mazeGraph,goalStates,BestFirstSearchAgentProgram())
-        st.write("after agent made")
+        #st.write("after agent made")
 
         re.add_thing(BFSMazeAgent)
-        st.write("added thing")
+        #st.write("added thing")
         st.header("State of the Environment", divider="red")
         nodeColors[BFSMazeAgent.state]="red"
         nodeColors[BFSMazeAgent.goal[0]]="green"
         buildGraph(mazeGraph, nodeColors) 
-        st.write("after graph built")
+        #st.write("after graph built")
         st.info(f"The Agent in: {BFSMazeAgent.state} with performance {BFSMazeAgent.performance}.")
         st.info(f"The Agent goal is: {BFSMazeAgent.goal} .")
 
