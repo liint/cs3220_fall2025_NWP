@@ -91,7 +91,7 @@ def main():
         re=MazeEnvironment(mazeGraph)
         BFSMazeAgent = MazeAgent(initState,mazeGraph,goalStates,BestFirstSearchAgentProgram())
         #st.write("after agent made")
-        BFSMazeAgent.seq=(BFSMazeAgent.search(BFSMazeAgent.formulate_problem(BFSMazeAgent.state,goalStates[0])))
+        BFSMazeAgent.seq=(BFSMazeAgent.search(BFSMazeAgent.formulate_problem(BFSMazeAgent.state,goalStates)))
 
         re.add_thing(BFSMazeAgent)
         #st.write("added thing")
