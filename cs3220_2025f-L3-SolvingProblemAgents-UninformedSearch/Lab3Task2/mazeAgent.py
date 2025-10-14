@@ -9,6 +9,7 @@ class MazeAgent(SimpleProblemSolvingAgentProgram):
         self.dataGraph = dataGraph
         self.goal = goal
         self.performance = len(dataGraph.nodes())//2
+        self.treasured = False
 
         if program is None or not isinstance(program, collections.abc.Callable):
             print("Can't find a valid program for {}, falling back to default.".format(self.__class__.__name__))

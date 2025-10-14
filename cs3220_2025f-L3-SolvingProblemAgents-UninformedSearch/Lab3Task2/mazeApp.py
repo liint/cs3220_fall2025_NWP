@@ -32,8 +32,11 @@ def AgentStep(opt):
         buildGraph(e.status, c) 
         drawBtn(e,a,c)
     else:
-        if a.state==a.goal:
-            st.success(" Agent now at the goal state: {}.".format(a.state))
+        if a.state is any(a.goal):
+            if a.treasured:
+                st.success(" Agent now at the goal state: {}.".format(a.state))
+            else:
+                a.treasured = True
         else:
             st.error("Agent in location {} and it is dead.".format(a.state))
         
