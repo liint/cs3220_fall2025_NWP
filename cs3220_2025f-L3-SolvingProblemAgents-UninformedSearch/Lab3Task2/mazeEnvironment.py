@@ -35,7 +35,7 @@ class MazeEnvironment(Environment):
         if not self.is_done():
             actions = []
             for agent in self.agents:
-                st.write(agent)
+                #st.write(agent)
                 if agent.alive:
                     action=agent.seq.pop(0)
                     print("Agent decided to do {}.".format(action))
