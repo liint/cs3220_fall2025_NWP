@@ -12,13 +12,14 @@ maze = [[1,0,1,1,1,0,"end"],
 
 treasures = ["diamond","gold","pizza","points"]
 
-for i in treasures:
+for i in len(treasures):
     a = random.randint(0,6)
     b = random.randint(0,6)
     while maze[a][b] != 1:
         a = random.randint(0,6)
         b = random.randint(0,6)
-    maze[a][b] = i
+    #maze[a][b] = i
+    treasures[i] = str(a +","+b)
 
 #print(maze)
 
