@@ -29,6 +29,8 @@ def AgentStep(opt):
         st.info(f"The Agent goal is: {a.goal} .")
         #st.write(a.state)
         c[a.state]="orange"
+        for i in a.goal:
+            c[i]="green"
         st.info("State of the Environment:")
         buildGraph(e.status, c) 
         drawBtn(e,a,c)
