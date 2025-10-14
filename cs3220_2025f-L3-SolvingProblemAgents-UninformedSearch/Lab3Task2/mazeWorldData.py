@@ -64,7 +64,7 @@ for i in mazeData:
         if j in mazeData[i]:
             mazeData[i][j] -=1
 
-"""mazeActions = {
+mazeActions = {
     "0,0":{},
     "0,2":{"advance":"2,2","left":"0,0","right":"0,3"},
     "0,3":{"advance":"3,3","left":"0,2","right":"0,4"},
@@ -97,7 +97,7 @@ for i in mazeData:
     "6,0":{"advance":"6,3"},
     "6,3":{"left":"5,3","right":"6,6"},
     "6,6":{}
-}"""
+}
 
 
 
