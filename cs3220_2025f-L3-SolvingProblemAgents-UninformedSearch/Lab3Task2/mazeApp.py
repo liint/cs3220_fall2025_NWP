@@ -37,6 +37,7 @@ def AgentStep(opt):
                 st.success(" Agent now at the goal state: {}.".format(a.state))
             else:
                 a.treasured = True
+                a.goal = "end"
         else:
             st.error("Agent in location {} and it is dead.".format(a.state))
         
